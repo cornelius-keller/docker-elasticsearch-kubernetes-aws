@@ -5,6 +5,7 @@ COPY do-not-use.yml /
 RUN mv /elasticsearch/config/elasticsearch.yml /elasticsearch/config/elasticsearch.yml.bkup && \
     mv do-not-use.yml /elasticsearch/config/elasticsearch.yml && \
     /elasticsearch/bin/plugin install cloud-aws && \
+    /elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/2.X && \
     mv /elasticsearch/config/elasticsearch.yml.bkup /elasticsearch/config/elasticsearch.yml
 
 RUN mv /run.sh /run-without-secrets.sh

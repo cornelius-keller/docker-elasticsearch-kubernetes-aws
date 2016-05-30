@@ -7,8 +7,6 @@ RUN mv /elasticsearch/config/elasticsearch.yml /elasticsearch/config/elasticsear
     /elasticsearch/bin/plugin install cloud-aws && \
     /elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf/2.X && \
     /elasticsearch/bin/plugin install delete-by-query && \
-    /elasticsearch/bin/plugin install license  && \
-    /elasticsearch/bin/plugin install marvel-agent && \
     mv /elasticsearch/config/elasticsearch.yml.bkup /elasticsearch/config/elasticsearch.yml
 
 RUN mv /run.sh /run-without-secrets.sh

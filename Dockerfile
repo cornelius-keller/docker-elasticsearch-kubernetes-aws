@@ -12,5 +12,7 @@ RUN mv /elasticsearch/config/elasticsearch.yml /elasticsearch/config/elasticsear
 
 RUN mv /run.sh /run-without-secrets.sh
 
+RUN grep -q -F 'script.engine.groovy.inline.update: on' /elasticsearch/config/elasticsearch.yml || echo 'script.engine.groovy.inline.update: on' >> /elasticsearch/config/elasticsearch.yml
+
 COPY run.sh /
 RUN chmod a+x /run.sh
